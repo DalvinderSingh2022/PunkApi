@@ -1,12 +1,13 @@
 import React from 'react';
 import './index.css';
+import CardsSection from './CardsSection';
 
 const App = () => {
     return (
-        <div>
-            App
-        </div>
+        <main>
+            <CardsSection />
+        </main>
     )
 }
 
-export default App
+export default App;
