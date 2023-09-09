@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const Card = ({ name, tagline, image_url }) => {
     return (
@@ -13,4 +13,4 @@ const Card = ({ name, tagline, image_url }) => {
     )
 }
 
-export default Card;
+export default memo(Card);
