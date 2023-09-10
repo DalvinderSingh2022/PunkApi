@@ -9,14 +9,14 @@
 }
 
 section {
-    background-color: rgb(243, 243, 249);
+    background-color: #f3f3f9;
     padding: 0 0 3em;
+    border-radius: 32px 32px 0 0;
 }
 
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    margin: auto;
     gap: 2em 1em;
     padding: 3em 2em;
 }
@@ -29,19 +29,18 @@ section {
     border-radius: 12px;
     color: #161616;
     position: relative;
-    min-height: 140px;
+    min-height: 180px;
     justify-content: space-between;
     transition: .2s ease;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     z-index: 9;
-    max-width: 340px;
 }
 
 .card img {
     position: absolute;
     height: 110%;
     right: .6em;
-    bottom: .4em;
+    bottom: .2em;
     transition: .2s ease;
     z-index: 9;
 }
@@ -58,13 +57,12 @@ section {
 }
 
 section button {
-    border: none;
     outline: none;
     align-self: flex-start;
     background-color: #8860f6;
     border: 1px solid #8860f6;
     color: #fff;
-    padding: 4px 12px;
+    padding: 6px 14px;
     border-radius: 50px;
     cursor: pointer;
 }
@@ -72,7 +70,7 @@ section button {
 .card::before {
     position: absolute;
     content: '';
-    background-color: #8860f6;
+    background: linear-gradient(135deg, #8860f6, #a787ff);
     border-radius: 80px 0 12px 0;
     bottom: 0;
     right: 0;
@@ -96,7 +94,8 @@ section .pagination {
 }
 
 .pagination button {
-    padding: 8px 14px;
+    width: 40px;
+    height: 40px;
 }
 
 .pagination button:is(.inactive, .disabled) {
@@ -107,4 +106,48 @@ section .pagination {
 .pagination button.disabled {
     pointer-events: none;
     cursor: default;
+    border-color: #fff;
+}
+
+section.search {
+    max-width: 1200px;
+    border-radius: 0 0 24px 24px;
+    background: linear-gradient(180deg, #8860f6, #a787ff);
+    position: relative;
+    text-align: center;
+    padding: 1em 0 2em;
+    color: #fff;
+    margin: 0 auto 3em;
+    font-size: 1.8em;
+    font-weight: 300;
+    box-shadow: #a787ff 0 4px 24px;
+}
+
+section.search form {
+    background-color: #fff;
+    padding: 0.5em 0.6em;
+    border-radius: 40px;
+    display: flex;
+    max-width: 920px;
+    margin: 1em auto -3.2em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    gap: 0.5em;
+}
+
+section.search form input {
+    border: 1px solid #c3c3c3;
+    padding: 8px 16px;
+    font-size: .6em;
+    border-radius: 30px;
+    width: 100%;
+    outline: none;
+}
+
+section.search form button {
+    align-self: stretch;
+    border: 1px solid #8860f6;
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
 }

@@ -2,19 +2,24 @@ import React, { useState } from 'react'
 import useFetch from './useFetch';
 import Card from './Card';
 import Pagination from './Pagination';
+import Search from './Search';
 
 const CardsSection = () => {
     const [page, setPage] = useState(1);
-    const [isLoading, isError, beers] = useFetch(`beers?page=${page}&per_page=12`);
-    console.log(page, (Math.floor(page / 5)))
+    const [search, setSearch] = useState(null);
+    const [isLoading, isError, beers] = useFetch(`beers?page=${page}&per_page=12${search ? `&beer_name=${search}` : ""}`);
+
     if (isError || isLoading) return;
     return (
-        <section>
-            <div className="cards">
-                {beers.map(beer => <Card {...beer} key={beer.id} />)}
-            </div>
-            <Pagination page={page} setPage={setPage} />
-        </section>
+        <>
+            <Search search={search} setSearch={setSearch} />
+            <section>
+                <div className="cards">
+                    {beers.map(beer => <Card {...beer} key={beer.id} />)}
+                </div>
+                <Pagination page={page} setPage={setPage} />
+            </section>
+        </>
     )
 }
 
