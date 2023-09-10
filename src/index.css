@@ -33,6 +33,8 @@ section {
     justify-content: space-between;
     transition: .2s ease;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    z-index: 9;
+    max-width: 340px;
 }
 
 .card img {
@@ -77,6 +79,7 @@ section button {
     height: 0;
     width: 0;
     transition: .2s ease;
+    z-index: -9;
 }
 
 .card:hover:before {
@@ -94,7 +97,6 @@ section .pagination {
 
 .pagination button {
     padding: 8px 14px;
-    min-width: 36px;
 }
 
 .pagination button:is(.inactive, .disabled) {

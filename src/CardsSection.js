@@ -6,7 +6,7 @@ import Pagination from './Pagination';
 const CardsSection = () => {
     const [page, setPage] = useState(1);
     const [isLoading, isError, beers] = useFetch(`beers?page=${page}&per_page=12`);
-
+    console.log(page, (Math.floor(page / 5)))
     if (isError || isLoading) return;
     return (
         <section>
