@@ -36,6 +36,13 @@ section {
     z-index: 9;
 }
 
+.card.loading::before {
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    border-radius: inherit;
+}
+
 .card img {
     position: absolute;
     height: 110%;
@@ -45,18 +52,19 @@ section {
     z-index: 9;
 }
 
-.card .tagline,
-.card .name {
+.tagline,
+.name {
     width: 100%;
     font-weight: 400;
     text-align: left;
 }
 
-.card .tagline {
-    color: #c3c3c3;
+.tagline,
+.beer .small {
+    color: #b8b8b8;
 }
 
-section button {
+button {
     outline: none;
     align-self: flex-start;
     background-color: #8860f6;
@@ -111,6 +119,7 @@ section .pagination {
 
 section.search {
     max-width: 1200px;
+    width: calc(100% - 16px);
     border-radius: 0 0 24px 24px;
     background: linear-gradient(180deg, #8860f6, #a787ff);
     position: relative;
@@ -143,6 +152,10 @@ section.search form input {
     outline: none;
 }
 
+section.search form input::placeholder {
+    color: #c3c3c3;
+}
+
 section.search form button {
     align-self: stretch;
     border: 1px solid #8860f6;
@@ -150,4 +163,63 @@ section.search form button {
     display: flex;
     align-items: center;
     gap: 0.4em;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 99;
+    display: grid;
+    place-items: center;
+}
+
+.popup .beer {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 1em 6.5em .8em 1.2em;
+    width: min(640px, calc(100% - 28px));
+    text-align: left;
+    position: relative;
+    font-size: 1.2em;
+}
+
+.beer img {
+    position: absolute;
+    height: 300px;
+    filter: drop-shadow(rgba(55, 55, 55, .4) 2px 18px 24px);
+    right: 0.2em;
+    bottom: 0.4em;
+}
+
+.beer .description,
+.beer .food_pairing {
+    font-size: .8em;
+    margin: .6em 0;
+}
+
+.beer .large {
+    font-size: 1.4em;
+    margin-right: 4px;
+    line-height: 1em;
+}
+
+.beer button {
+    margin: 2px;
+    cursor: default;
+    background-color: #a787ff;
+    border-color: #a787ff;
+}
+
+.beer .close {
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    font-size: 2em;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #8860f6;
+    cursor: pointer;
 }

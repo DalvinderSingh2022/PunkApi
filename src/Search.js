@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 
-const Search = ({ setSearch }) => {
-    const [value, setValue] = useState(null);
+const Search = ({ search, setSearch }) => {
+    const [value, setValue] = useState('');
+
     const handelSubmit = (e) => {
         e.preventDefault();
         setSearch(value);
     }
+
     return (
         <section className='search'>
-            <h1>Beer is Good</h1>
-            <h1>But, Beers are Better</h1>
+            <h1>Beer is Good</h1><h1>But, Beers are Better</h1>
             <form className="options">
                 <input
                     type="text"
@@ -19,10 +20,11 @@ const Search = ({ setSearch }) => {
                     value={value}
                     onChange={(e) => setValue(e.target.value)}
                 />
-                <button onClick={(e) => handelSubmit(e)}><i class="fa-solid fa-magnifying-glass"></i>search</button>
+                <button onClick={(e) => handelSubmit(e)}><i className="fa-solid fa-magnifying-glass"></i>search</button>
+                {search && <button type='button' onClick={() => { setSearch(null); setValue('') }}><i className="fa-solid fa-xmark"></i></button>}
             </form>
         </section>
     )
 }
 
-export default Search;
+export default memo(Search);
