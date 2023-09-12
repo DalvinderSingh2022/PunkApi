@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# PunkApi
+A small react app to display data from [PunkApi](https://punkapi.com/documentation/v2) Displaying the data in cards with images, and the search functionality. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://github.com/DalvinderSingh2022/PunkApi/assets/110463060/de4bcecc-e112-4496-a982-e88dfcd97893)
+![image](https://github.com/DalvinderSingh2022/PunkApi/assets/110463060/cbd78e4b-f7a4-4215-af6b-f4ff8b29c03d)
+![image](https://github.com/DalvinderSingh2022/PunkApi/assets/110463060/39c52144-de51-4e48-93cf-e46b13d1446e)
+![image](https://github.com/DalvinderSingh2022/PunkApi/assets/110463060/5d117940-95f2-4426-a7c0-8b25d61b019c)
 
-## Available Scripts
 
-In the project directory, you can run:
+# Features
+- Display a list of beers with details from the PunkAPI.
+- Search for beers by name.
+- View detailed information about individual beers.
+- Responsive design for various screen sizes.
+- Easy-to-use interface for beer enthusiasts and developers.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Searching for Beers
+- Once the website is running, you will see a search bar at the top of the page.
+- Enter a search query in the search bar. You can search for beers by name.
+- Press the "Search" button or hit Enter to initiate the search.
+- The website will display a list of beers that match your search criteria. Click on a beer card view button to view more details about the selected beer.
