@@ -16,7 +16,7 @@ const App = () => {
 
     useEffect(() => setPage(1), [search]);
 
-    if (!isError) return <Error />;
+    if (isError) return <Error />;
 
     if (isLoading) return <Loading />;
     return (
