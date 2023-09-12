@@ -1,7 +1,6 @@
-import React, { memo } from 'react';
+import React from 'react';
 
 export const Pagination = ({ page, setPage, lastPage }) => {
-    console.log(lastPage)
     var firstPage = 1;
     var dots = 5;
 
@@ -24,4 +23,4 @@ export const Pagination = ({ page, setPage, lastPage }) => {
     );
 };
 
-export default memo(Pagination);
+export default Pagination;

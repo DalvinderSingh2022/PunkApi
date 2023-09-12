@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import useFetch from './useFetch';
 import Card from './Card';
 import Pagination from './Pagination';
 import Search from './Search';
 import Popup from './Popup';
 import './index.css';
+import Error from './Error';
+import Loading from './Loading';
 
 const App = () => {
     const [page, setPage] = useState(1);
@@ -12,7 +14,11 @@ const App = () => {
     const [beer, setBeer] = useState(null);
     const [isLoading, isError, beers, lastPage] = useFetch(`beers?page=${page}&per_page=12${search ? `&beer_name=${search}` : ""}`, page);
 
-    if (isError || isLoading) return;
+    useEffect(() => setPage(1), [search]);
+
+    if (!isError) return <Error />;
+
+    if (isLoading) return <Loading />;
     return (
         <main>
             <Search search={search} setSearch={setSearch} />
