@@ -74,10 +74,14 @@ section.search form input::placeholder {
 section.search form button {
     align-self: stretch;
     border: 1px solid var(--purple_dark);
-    padding: 8px 24px;
+    padding: 8px 14px;
     display: flex;
     align-items: center;
     gap: 0.4em;
+}
+
+section.search form button:hover {
+    box-shadow: var(--purple_ligth) 0 2px 12px;
 }
 
 .cards {

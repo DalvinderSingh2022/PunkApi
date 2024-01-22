@@ -20,7 +20,7 @@ const Search = ({ search, setSearch }) => {
                     value={value}
                     onChange={(e) => setValue(e.target.value)}
                 />
-                <button onClick={(e) => handelSubmit(e)}><i className="fa-solid fa-magnifying-glass"></i>search</button>
+                <button onClick={(e) => handelSubmit(e)}><i className="fa-solid fa-magnifying-glass"></i></button>
                 {search && <button type='button' onClick={() => { setSearch(null); setValue('') }}><i className="fa-solid fa-xmark"></i></button>}
             </form>
         </section>
